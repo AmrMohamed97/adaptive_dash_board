@@ -6,6 +6,7 @@ import 'package:responsive_dash_board/utils/model/list_tile_model.dart';
 import 'package:responsive_dash_board/views/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:responsive_dash_board/views/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/views/widgets/income_section.dart';
+import 'package:responsive_dash_board/views/widgets/my_card_and_transaction.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -31,7 +32,15 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(child: IncomeSection()),
+        Expanded(
+          child: Column(
+            children: [
+              SizedBox(height: 40),
+              MyCardAndTransactionHistory(),
+              Expanded(child: IncomeSection()),
+            ],
+          ),
+        ),
       ],
     );
   }
