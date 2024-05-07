@@ -5,7 +5,7 @@ import 'package:responsive_dash_board/views/widgets/transaction_model.dart';
 class TransactionHistoryListView extends StatelessWidget {
   const TransactionHistoryListView({
     super.key,
-   });
+  });
 
   static const List<TransactionModel> transactionList = [
     TransactionModel(
@@ -30,13 +30,8 @@ class TransactionHistoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      children: List.generate(
-          transactionList.length,
-          (index) =>
-              TransactionItem(transactionModel: transactionList[index])),
+    return Column(
+      children: transactionList.map((e) => TransactionItem(transactionModel: e)).toList(),
     );
   }
 }
