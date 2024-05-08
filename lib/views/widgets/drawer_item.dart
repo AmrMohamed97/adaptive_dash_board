@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
- import 'package:responsive_dash_board/utils/model/drawer_item_model.dart';
+import 'package:responsive_dash_board/utils/model/drawer_item_model.dart';
 import 'package:responsive_dash_board/views/widgets/active_item.dart';
 import 'package:responsive_dash_board/views/widgets/in_active_item.dart';
 
@@ -15,4 +15,3 @@ class DrawerItem extends StatelessWidget {
         : InActiveItem(drawerItemModel: drawerItemModel);
   }
 }
-
