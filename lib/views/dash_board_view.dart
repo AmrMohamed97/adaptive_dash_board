@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/assets_images.dart';
 import 'package:responsive_dash_board/utils/model/list_tile_model.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/views/widgets/adaptive_layout.dart';
 import 'package:responsive_dash_board/views/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/views/widgets/desktop_layout.dart';
@@ -22,7 +23,7 @@ class _DashBoardViewState extends State<DashBoardView> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: const Color(0xFFF7F9FA),
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.mobileWidth
           ? AppBar(
               backgroundColor: const Color(0xffFAFAFA),
               leading: IconButton(
@@ -30,7 +31,7 @@ class _DashBoardViewState extends State<DashBoardView> {
                   icon: const Icon(Icons.menu)),
             )
           : null,
-      drawer: MediaQuery.sizeOf(context).width < 800
+      drawer: MediaQuery.sizeOf(context).width <  SizeConfig.mobileWidth
           ? const CustomDrawer(
               listTileData: ListTileModel(
                 title: 'Lekan Okeowo',

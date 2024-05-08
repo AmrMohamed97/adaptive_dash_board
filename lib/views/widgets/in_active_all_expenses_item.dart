@@ -29,21 +29,21 @@ class InActiveAllExpensesItem extends StatelessWidget {
           ),
           Text(
             allExpensesModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             allExpensesModel.date,
-            style: AppStyles.styleRegular14.copyWith(color: Colors.white),
+            style: AppStyles.styleRegular14(context).copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             allExpensesModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
           ),
         ],
       ),

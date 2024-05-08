@@ -17,7 +17,7 @@ class InActiveItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.imagePath),
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
     );
   }

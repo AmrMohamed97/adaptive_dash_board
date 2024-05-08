@@ -12,7 +12,7 @@ class ActiveItem extends StatelessWidget {
       leading: SvgPicture.asset(drawerItemModel.imagePath),
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.styleBold16.copyWith(color: const Color(0xff4EB7F2)),
+        style: AppStyles.styleBold16(context).copyWith(color: const Color(0xff4EB7F2)),
       ),
       trailing: Container(
         width: 3.27,

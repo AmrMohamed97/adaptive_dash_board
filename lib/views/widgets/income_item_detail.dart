@@ -17,10 +17,10 @@ class IncomeItemDetail extends StatelessWidget {
         ),
       ),
       title: Text(model.title,
-        style:   AppStyles.styleRegular16,
+        style:   AppStyles.styleRegular16(context),
       ),
       trailing:Text(model.amount,
-        style: AppStyles.styleMedium16.copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color:const  Color(0xff208CC8)
         ),
       ),

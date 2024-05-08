@@ -5,7 +5,7 @@ import 'package:responsive_dash_board/views/widgets/all_expenses_item_header.dar
 
 class ActiveAllExpensesItem extends StatelessWidget {
   const ActiveAllExpensesItem({super.key, required this.allExpensesModel});
-  final AllExpensesItemModel  allExpensesModel;
+  final AllExpensesItemModel allExpensesModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,21 +25,21 @@ class ActiveAllExpensesItem extends StatelessWidget {
           ),
           Text(
             allExpensesModel.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16(context),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             allExpensesModel.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14(context),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             allExpensesModel.price,
-            style: AppStyles.styleSemiBold24,
+            style: AppStyles.styleSemiBold24(context),
           ),
         ],
       ),
