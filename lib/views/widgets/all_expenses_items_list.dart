@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/assets_images.dart';
 import 'package:responsive_dash_board/utils/model/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/views/widgets/all_expenses_item.dart';
- 
+
 class AllExpensesItemsList extends StatefulWidget {
   const AllExpensesItemsList({super.key});
 
@@ -36,26 +36,53 @@ class _AllExpensesItemsListState extends State<AllExpensesItemsList> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: allExpensesItemList.asMap().entries.map((e) {
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
               setState(() {
-                selectedItem = e.key;
+                selectedItem = 0;
               });
             },
-            child: Padding(
-              padding: e.key == 1
-                  ? const EdgeInsets.symmetric(horizontal: 12)
-                  : EdgeInsets.zero,
-              child: AllExpensesItem(
-                allExpensesModel: e.value,
-                isActive: !(selectedItem == e.key),
-              ),
+            child: AllExpensesItem(
+              allExpensesModel: allExpensesItemList[0],
+              isActive: selectedItem == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(
+          width: 16,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedItem = 1;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesModel: allExpensesItemList[1],
+              isActive: selectedItem == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 16,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedItem = 2;
+              });
+            },
+            child: AllExpensesItem(
+              allExpensesModel: allExpensesItemList[2],
+              isActive: selectedItem == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
