@@ -35,12 +35,12 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           titleStyle: AppStyles.styleMedium16(context).copyWith(
             color: touchIndex == 0 ? const Color(0xff208CC8) : Colors.white,
           ),
-          radius: touchIndex == 0 ? 70 : 50,
+          radius: touchIndex == 0 ? 80 : 60,
         ),
         PieChartSectionData(
           color: const Color(0xff064061),
           value: 20,
-          radius: touchIndex == 1 ? 70 : 50,
+          radius: touchIndex == 1 ? 80 : 60,
           titlePositionPercentageOffset: touchIndex == 1 ? 1.85 : null,
           title: touchIndex == 1 ? 'Product royalti' : '20%',
           titleStyle: AppStyles.styleMedium16(context).copyWith(
@@ -55,7 +55,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           titleStyle: AppStyles.styleMedium16(context).copyWith(
             color: touchIndex == 2 ? const Color(0xff4EB7F2) : Colors.white,
           ),
-          radius: touchIndex == 2 ? 70 : 50,
+          radius: touchIndex == 2 ? 80 : 60,
         ),
         PieChartSectionData(
           color: const Color(0xffE2DECD),
@@ -65,7 +65,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             color: touchIndex == 3 ? const Color(0xffE2DECD) : Colors.white,
           ),
           value: 22,
-          radius: touchIndex == 3 ? 70 : 50,
+          radius: touchIndex == 3 ? 80 : 60,
         ),
       ],
     );
